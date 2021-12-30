@@ -1,0 +1,39 @@
+
+/*
+  Class
+  Static Properties & Methods
+*/
+
+class User {
+    // Static Properties
+    static counter = 0;
+  
+    constructor(name, email, age) {
+      this.name = name;
+      this.email = email;
+      this.age = age;
+      User.counter++;
+    }
+    sayHello() {
+      return `Hello ${this.name}`;
+    }
+    showEmail() {
+      return `Your Email Is ${this.email}`;
+    }
+  
+    // Static Methods
+    static countObjects = function () {
+      return `${this.counter} Objects Created.`;
+    };
+  }
+  
+  let user1 = new User("majid", "majid@n.sa", 21);
+  let user2 = new User("abdel", "abdel@n.sa", 30);
+  let user3 = new User("zinddine", "zinddine@n.sa", 45);
+  let user4 = new User("Osama", "Osama@n.sa", 10);
+  // let user2 = User("Ahmed", "a@nn.sa"); // TypeError: Class constructor User
+  
+  console.log(typeof User); // Function
+  //console.log(User === User.prototype.constructor); // True
+  
+  console.log(User.countObjects());
