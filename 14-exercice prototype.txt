@@ -1,0 +1,12 @@
+
+String.prototype.aljiwar=function(width){
+    let number1 = this ;
+        while (number1.length < width) {
+            number1 = `0${number1}`;
+        }
+        return number1;
+};
+
+console.log("12".aljiwar(4));
+
+
